@@ -8,7 +8,6 @@ fn main() {
     let secret_number = random_range(1..100);
     println!("Please enter your guess:");
 
-
     loop {
         let mut guess = String::new();
         io::stdin()
@@ -16,7 +15,7 @@ fn main() {
             .expect("Failed to read line");
         guess = guess.trim().to_string();
 
-        let guess3: u32 = match guess.trim().parse(){
+        let guess3: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
